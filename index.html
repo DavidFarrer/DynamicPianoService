@@ -5,7 +5,8 @@
 		<title>Piano Service - Dynamic Piano Service</title>
 		<link href="./public/styles/bootstrap.min.css" type="text/css" rel="stylesheet">
 		<link href="./public/styles/main.css" type="text/css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Rye" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<nav class="navbar navbar-fixed-top">
@@ -17,17 +18,92 @@
         		<span class="icon-bar"></span>
         		<span class="icon-bar"></span>
      			</button>
-      		<p class="navbar-brand" href="#">Brand</p>
+      		<a class="navbar-brand" href="#"><img id="logo" src="./public/images/logo-large1.png"></a>
 				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="navbar-link"><a href="#">Home</a></li>
+						<li class="navbar-link"><a href="#services">Services</a></li>
+						<li class="navbar-link"><a href="#contact">Contact</a></li>
+					</ul>
 			</div>
 		</nav>
 		<div id="header-background">
 			<div class="darken-overlay">
 				<h1>Dynamic Piano Service</h1>
 				<h4>Serving Windsor-Essex County since 2009</h4>
-				<button class="btn">Get Service</button>
+				<a class="btn" href="#contact">Get Service</a>
 			</div>
 		</div>
-		<script src="/public/scripts/main.js"></script>
+		<section id="services" class="container">
+			<h2 class="subtitle">Services</h2>
+			<div class="row service-header">
+				<div class="service-item col-xs-12 col-md-6">
+					<div class="col-xs-12 col-md-2"></div>
+					<div class="service-item-inner col-xs-12 col-md-9">
+						<h3>Tuning</h3>
+						<p>Lorem ipsum dolor amet godard drinking vinegar trust fund chillwave, wolf air plant pickled shabby chic +1 four dollar toast austin. Actually pinterest aesthetic tousled meh vinyl echo park man braid VHS intelligentsia vexillologist pabst godard. Neutra cronut flannel drinking vinegar disrupt knausgaard flexitarian occupy kickstarter fanny pack taiyaki hoodie.</p>
+					</div>
+					<div class="col-xs-12 col-md-1"></div>
+				</div>
+				<div class="service-item col-xs-12 col-md-6">
+					<div class="col-xs-12 col-md-1"></div>
+					<div class="service-item-inner col-xs-12 col-md-9">
+						<h3>Regulation</h3>
+						<p>Salvia glossier retro, semiotics pork belly actually flexitarian asymmetrical hashtag adaptogen poke literally. Meh meggings fingerstache kombucha, pinterest hexagon tumblr. Swag organic shoreditch, offal skateboard small batch semiotics stumptown. Chartreuse flexitarian pok pok cred fixie.</p>
+					</div>
+					<div class="col-xs-12 col-md-2"></div>
+				</div>
+			</div>
+			<div class="row service-header">
+				<div class="service-item col-xs-12 col-md-6">
+					<div class="col-xs-12 col-md-2"></div>
+					<div class="service-item-inner col-xs-12 col-md-9">
+						<h3>Repair</h3>
+						<p>Chartreuse coloring book intelligentsia tilde mlkshk tumblr. Twee drinking vinegar art party pinterest man braid chia jianbing tote bag pop-up typewriter forage. Helvetica leggings post-ironic vegan butcher literally tumeric woke live-edge fingerstache sartorial chillwave authentic pinterest banh mi.</p>
+					</div>
+					<div class="col-xs-12 col-md-1"></div>
+				</div>
+				<div class="service-item col-xs-12 col-md-6">
+					<div class="col-xs-12 col-md-1"></div>
+					<div class="service-item-inner col-xs-12 col-md-9">
+						<h3>Voicing</h3>
+						<p>Hot chicken taiyaki echo park austin selvage edison bulb freegan pop-up palo santo before they sold out thundercats. Selfies fashion axe dreamcatcher schlitz pop-up. Shabby chic asymmetrical sustainable pickled echo park franzen.</p>
+					</div>
+					<div class="col-xs-12 col-md-2"></div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<h2 class="subtitle">Contact</h2>
+			<div id="contact-card">
+				<div id="form-div">
+					<form action="https://formspree.io/the_source_c@hotmail.com" method="POST">
+						<label for="name">First Name <span class="asterisk">*</span></label>
+		    		<div class="input-line">
+		    			<i class="fa fa-user"></i>
+		    			<input type="text" name="name" placeholder="First Name" required>
+		    		</div>
+		    		<label for="_replyto">Email <span class="asterisk">*</span></label>
+		    		<div class="input-line">
+		    			<i class="fa fa-envelope"></i>
+		   				<input type="email" name="_replyto" placeholder="Email" required>
+		   			</div>
+		   			<label for="phone">Phone Number (format: 555-555-5555) <span class="asterisk">*</span></label>
+		   			<div class="input-line">
+		   				<i class="fa fa-phone"></i>
+		   				<input id="phonenumber" name="phone" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="Phone Number" required>
+		   			</div>
+		   			<label for="message">Message</label>
+		   			<div class="input-line">
+		   				<i class="fa fa-pencil"></i>
+		   				<textarea name="message" placeholder="Message"></textarea>
+		   			</div>
+		    		<input type="submit" value="Send">
+					</form>
+				</div>
+			</div>
+		</section>
+		<script src="./public/scripts/main.js"></script>
 	</body>
 </html>
