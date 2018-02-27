@@ -3,8 +3,10 @@ var logo = document.querySelector("#logo");
 var toggle = document.querySelector(".navbar-toggle");
 var collapse = document.querySelector(".navbar-collapse");
 
+window.addEventListener("load", setNavStyle)
+window.addEventListener("scroll", setNavStyle);
 
-window.addEventListener("scroll", function(e) {
+function setNavStyle(e) {
 	var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 	if (scrollTop > 20 && !navbar.classList.contains("fix-top")) {
 		navbar.classList.add("fix-top");
@@ -13,7 +15,7 @@ window.addEventListener("scroll", function(e) {
 		navbar.classList.remove("fix-top");
 		logo.src = "./public/images/logo-large1.png";
 	}
-});
+}
 
 // Toggle if navbar menu is open or closed
 function toggleMenu() {
