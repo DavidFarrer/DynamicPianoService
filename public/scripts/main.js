@@ -2,6 +2,7 @@ var navbar = document.querySelector(".navbar-fixed-top");
 var logo = document.querySelector("#logo");
 var toggle = document.querySelector(".navbar-toggle");
 var collapse = document.querySelector(".navbar-collapse");
+var navbarLinks = document.querySelectorAll(".navbar-link");
 
 window.addEventListener("load", setNavStyle)
 window.addEventListener("scroll", setNavStyle);
@@ -25,10 +26,17 @@ function toggleMenu() {
 
 function closeMenusOnResize() {
     if (document.body.clientWidth >= 768) {
-        collapse.classList.add('collapse');
-        collapse.classList.remove('in');
+        collapse.classList.add("collapse");
+        collapse.classList.remove("in");
     }
 }
 
+navbarLinks.forEach(function(navbarLink) {
+	navbarLink.addEventListener("click", function(e) {
+		if (collapse.classList.contains("in")) {
+			toggleMenu();
+		}
+	});
+});
 window.addEventListener('resize', closeMenusOnResize, false);
 toggle.addEventListener('click', toggleMenu, false);
