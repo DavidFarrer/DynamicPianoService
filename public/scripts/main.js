@@ -1,5 +1,7 @@
 var navbar = document.querySelector(".navbar-fixed-top");
 var logo = document.querySelector("#logo");
+var toggle = document.querySelector(".navbar-toggle");
+var collapse = document.querySelector(".navbar-collapse");
 
 
 window.addEventListener("scroll", function(e) {
@@ -12,3 +14,19 @@ window.addEventListener("scroll", function(e) {
 		logo.src = "./public/images/logo-large1.png";
 	}
 });
+
+// Toggle if navbar menu is open or closed
+function toggleMenu() {
+    collapse.classList.toggle('collapse');
+    collapse.classList.toggle('in');
+}
+
+function closeMenusOnResize() {
+    if (document.body.clientWidth >= 768) {
+        collapse.classList.add('collapse');
+        collapse.classList.remove('in');
+    }
+}
+
+window.addEventListener('resize', closeMenusOnResize, false);
+toggle.addEventListener('click', toggleMenu, false);
