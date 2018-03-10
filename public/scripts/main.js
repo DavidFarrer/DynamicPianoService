@@ -4,20 +4,6 @@ var toggle = document.querySelector(".navbar-toggle");
 var collapse = document.querySelector(".navbar-collapse");
 var navbarLinks = document.querySelectorAll(".navbar-link");
 
-// window.addEventListener("load", setNavStyle)
-// window.addEventListener("scroll", setNavStyle);
-
-// function setNavStyle(e) {
-// 	var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-// 	if (scrollTop > 20 && !navbar.classList.contains("fix-top")) {
-// 		navbar.classList.add("fix-top");
-// 		logo.src = "./public/images/small-logo.png";
-// 	} else if (scrollTop < 20 && navbar.classList.contains("fix-top")) {
-// 		navbar.classList.remove("fix-top");
-// 		logo.src = "./public/images/logo-large1.png";
-// 	}
-// }
-
 function navbarSwitcher(el) {
 	var logo = document.querySelector("#logo");
 
@@ -32,7 +18,7 @@ function navbarSwitcher(el) {
 		fix: "./public/images/small-logo.png",
 		flow: "./public/images/logo-large1.png"
 	};
-	
+
 	//Preload secondary image for faster rendering on first showing
 	var preloadImage = new Image();
 	preloadImage.src = sources.fix;
