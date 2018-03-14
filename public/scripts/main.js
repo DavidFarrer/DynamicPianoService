@@ -24,7 +24,6 @@ function navbarSwitcher(el) {
 	preloadImage.src = sources.fix;
 
 	var scroll_handler = function() {
-		console.log("scrolling");
 		return setTimeout(function() {
 			if (scrolling) return;
 			scrolling = true;
