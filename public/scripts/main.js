@@ -70,6 +70,9 @@ navbarLinks.forEach(function(navbarLink) {
 		}
 	});
 });
+
+document.querySelector("#year").textContent = new Date().getFullYear();
+
 window.addEventListener('resize', closeMenusOnResize, false);
 toggle.addEventListener('click', toggleMenu, false);
 navbarSwitcher(navbar);
